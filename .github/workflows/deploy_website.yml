@@ -3,13 +3,17 @@ name: Deploy website
 on:
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   prod-deploy:
     runs-on: [self-hosted, website, production]
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: main
 

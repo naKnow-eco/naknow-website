@@ -1,0 +1,14 @@
+{
+  // TypeScript configuration for ESLint package
+  "extends": [
+    "typescript-config/base",
+    "typescript-config/library",
+    "typescript-config/strict"
+  ],
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "rootDir": ".",
+    "outDir": "./dist"
+  },
+  "include": ["./**/*"]
+}

@@ -1,0 +1,147 @@
+{
+    "home": {
+        "hero": {
+            "title": "Reliable environmental data to inform digital design and policy decisions",
+            "description": "<span class=\"color-gold-dark\">naKnow</span> is a collaborative initiative producing open scientific knowledge and environmental data on key digital components, to support informed decision-making across the digital value chain."
+        },
+        "cards": {
+            "card-1": "Research-based and methodologically transparent",
+            "card-2": "Fully open access and open data outputs",
+            "card-3": "Publicly supported initiative, designed as a long-term commons"
+        },
+        "scope": {
+            "title": "Understand the scope of naKnow",
+            "knowledge": {
+                "title": "Strengthening environmental knowledge on digital components.",
+                "description": "Environmental considerations related to digital technologies are becoming increasingly central to industrial strategies, public action, and regulatory frameworks.\n\nLife Cycle Assessment (LCA), in particular, is widely used to evaluate environmental performance and to inform design choices, investment decisions, and policy orientations across the digital sector.\n\nTo be effective, LCA-based assessments rely on robust, transparent, and well-documented environmental knowledge.\n\nFor many fundamental digital components, however, this knowledge remains unevenly structured, difficult to access, or insufficiently harmonised across actors. This situation limits the comparability of results and weakens their consistent use in decision-making processes."
+            },
+            "details": {
+                "title": "Strengthening shared environmental knowledge on digital components is therefore essential to :",
+                "values": [
+                    "improve the robustness of LCA results",
+                    "enable meaningful comparisons",
+                    "support more consistent decisions across the digital value chain"
+                ]
+            }
+        },
+        "roadmap": {
+            "title": "naKnow’s mission is to make high-quality\nenvironmental knowledge on digital components openly and sustainably available, in order to strengthen the robustness, transparency, and usability of environmental assessments.",
+            "objectives": {
+                "science": "Produce openly accessible scientific knowledge on key digital components",
+                "public": "Deliver open environmental datasets suitable for reuse by public authorities and practitioners",
+                "simple": "Facilitate informed decision-making for non-expert and expert stakeholders alike"
+            }
+        },
+        "goal": {
+            "title": "What naKnow delivers.",
+            "open": {
+                "title": "An open online knowledge base documenting",
+                "values": [
+                    "manufacturing processes",
+                    "value chains",
+                    "and environmental assumptions for selected categories of digital components"
+                ]
+            },
+            "dataset": {
+                "title": "All datasets and knowledge produced within naKnow are :",
+                "values": [
+                    "published as open resources and open data, using formats compatible with European practices",
+                    "intended to support reuse by public platforms, including environmental reference databases."
+                ],
+                "knowledge": {
+                    "link": "https://lib.naknow.eco/doku.php?id=start",
+                    "text": "Open knowledge base"
+                },
+                "environmental": {
+                    "text": "Environnemental dataset",
+                    "link": "https://github.com/"
+                }
+            },
+            "models": {
+                "values": [
+                    "Silicon wafers and derived components (CPU, GPU, RAM, SSD)",
+                    "Printed Circuit Boards (PCB)",
+                    "Displays",
+                    "Hard Disk Drives (HDD)",
+                    "Optical components, including receivers and lasers"
+                ]
+            },
+            "other": {
+                "review": "Review of scientific and technical literature",
+                "modelling": "Modelling of manufacturing processes and global value chains",
+                "analyses": "Laboratory analyses to support and refine assumptions",
+                "documentation": "Transparent documentation of uncertainties and limits"
+            },
+            "conclusion": "naKnow does not promote specific technologies, products, or industrial actors.\nIts role is to document, analyse, and make data available."
+        },
+        "axes": {
+            "title": "naKnow brings together partners from research, industry, and expert organisations, under the supervision of public authorities involved in the project’s steering.",
+            "values": [
+                "Clear roles and responsibilities",
+                "Documented review processes",
+                "Transparency on decision-making and outputs"
+            ]
+        },
+        "partners": {
+            "title": "naKnow brings together partners from research, industry, and expert organisations",
+            "france2030": " is supported under the Econum call for projects, as part of the France 2030 initiative."
+        },
+        "contact": {
+            "title": "contact",
+            "description": "This contact form is intended for organisations and experts wishing to contribute, follow the initiative, or better understand its scope.",
+            "form": {
+                "personal": {
+                    "title": "contact details",
+                    "name": {
+                        "label": "First name/Last name"
+                    },
+                    "phone": {
+                        "label": "Phone"
+                    },
+                    "email": {
+                        "label": "E-mail adress"
+                    }
+                },
+                "company": {
+                    "title": "company",
+                    "sector": {
+                        "label": "Sector of activity"
+                    },
+                    "name": {
+                        "label": "Name of your organisation"
+                    },
+                    "yourTitle": {
+                        "label": "Title"
+                    }
+                },
+                "request": {
+                    "title": "yout request",
+                    "requirement": {
+                        "label": "Your business requirement"
+                    },
+                    "subject": {
+                        "label": "Subject of the message"
+                    },
+                    "message": {
+                        "label": "Message"
+                    }
+                }
+            }
+        }
+    },
+    "footer": {
+        "copyright": "© 2026 naKnow\nAll rights reserved.\n"
+    },
+    "action": {
+        "goToTop": "Back to top"
+    },
+    "header": {
+        "links": {
+            "about": "About naKnow",
+            "mission": "Mission & objectives",
+            "outputs": "Outputs",
+            "methods": "Methods",
+            "contact": "Contact"
+        }
+    }
+}

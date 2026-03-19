@@ -1,0 +1,31 @@
+
+h1, h2, h3, h4, h5, h6 {
+  @add-mixin font-heading;
+}
+
+p, a, li, label, td {
+  @add-mixin p;
+}
+
+*[id] {
+  scroll-margin-top: 6rem;
+}
+
+h1 { @add-mixin h1; }
+h2 { @add-mixin h2; }
+h3 { @add-mixin h3; }
+
+@add-mixin media mobile {
+  :root { font-size: 80%; }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  li {
+    list-style: inside '\2022  ';
+  }
+}

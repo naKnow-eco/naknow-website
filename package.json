@@ -1,0 +1,42 @@
+{
+  "name": "na-know",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "locales": "scripts/fetch-locales.sh"
+  },
+  "dependencies": {
+    "@nuxt/image": "2.0.0",
+    "@nuxtjs/device": "4.0.0",
+    "@nuxtjs/i18n": "^10.2.3",
+    "nuxt": "^4.3.1",
+    "nuxt-svgo": "^4.2.6",
+    "vue": "^3.5.30",
+    "vue-router": "^5.0.3"
+  },
+  "peerDependencies": {
+    "eslint-config": "workspace:*",
+    "typescript-config": "workspace:*"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.8",
+    "postcss-aspect-ratio-polyfill": "^2.0.0",
+    "postcss-calc": "^10.1.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-focus-within": "^10.0.0",
+    "postcss-gap-properties": "^7.0.0",
+    "postcss-hexrgba": "^2.1.0",
+    "postcss-import": "^16.1.1",
+    "postcss-inline-media": "^1.5.0",
+    "postcss-mixins": "^12.1.2",
+    "postcss-nested": "^7.0.2",
+    "postcss-simple-vars": "^7.0.1",
+    "postcss-url": "^10.1.3",
+    "postcss-view-sizes": "^1.0.0"
+  }
+}

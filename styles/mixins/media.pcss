@@ -1,0 +1,5 @@
+@define-mixin media $value {
+  @media $media-$(value) {
+    @mixin-content;
+  }
+}

@@ -1,0 +1,19 @@
+@define-mixin text-color $color, $opacity: 1 {
+  color: rgba($(color), $(opacity));
+}
+
+@define-mixin bg-color $color, $opacity: 1 {
+  background-color: rgba($(color), $(opacity));
+}
+
+@define-mixin border-color $color, $opacity: 1 {
+  border-color: rgba($(color), $(opacity));
+}
+
+@define-mixin stroke-color $color, $opacity: 1 {
+  stroke: rgba($(color), $(opacity));
+}
+
+@define-mixin gradient $to, $percent: 50%, $color1: $blue-dark, $color2: $black-light {
+  background-image: linear-gradient(to $(to), $(color1) 0%, $(percent), $(color2) 100%);
+}

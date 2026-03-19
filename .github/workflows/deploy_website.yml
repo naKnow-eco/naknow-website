@@ -7,9 +7,11 @@ permissions: {}
 
 jobs:
   prod-deploy:
-    runs-on: [self-hosted, website, production]
+    runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: read
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout main branch

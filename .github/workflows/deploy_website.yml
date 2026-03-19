@@ -41,5 +41,5 @@ jobs:
           server: ${{ secrets.FTP_URL }}
           username: ${{ secrets.LOGIN }}
           password: ${{ secrets.PASSWD }}
-          local-dir: ./dist/
+          local-dir: ./.output/public/
           server-dir: /

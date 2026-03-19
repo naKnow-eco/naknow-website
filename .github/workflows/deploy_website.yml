@@ -1,0 +1,28 @@
+name: Deploy website
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prod-deploy:
+    runs-on: [self-hosted, website, production]
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Build website
+        run: |
+          pnpm i --frozen-lockfile
+          pnpm generate
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ftp.your-server.com
+          username: ${{ secrets.LOGIN }}
+          password: ${{ secrets.PASSWD }}
+          local-dir: ./dist/
+          server-dir: /

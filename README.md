@@ -4,6 +4,11 @@ The official website for [naKnow](https://naknow.eco), a collaborative initiativ
 
 Built with [Nuxt 4](https://nuxt.com).
 
+## Requirements
+
+- Node.js 20+
+- pnpm 10+
+
 ## Development
 
 ```bash

@@ -1,75 +1,24 @@
-# Nuxt Minimal Starter
+# naKnow Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The official website for [naKnow](https://naknow.eco), a collaborative initiative building an open environmental knowledge base for the electronics industry.
 
-## Setup
+Built with [Nuxt 4](https://nuxt.com).
 
-Make sure to install dependencies:
+## Development
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+## Build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm generate
 ```
 
-Locally preview production build:
+## License
 
-```bash
-# npm
-npm run preview
+Copyright 2026 naKnow. All rights reserved.
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This source code is made available for viewing purposes only. No permission is granted to use, copy, modify, or distribute this software or its source code, in whole or in part, for any purpose.

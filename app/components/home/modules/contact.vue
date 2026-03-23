@@ -86,7 +86,7 @@
             required
           />
         </div>
-        <button type="submit">Send</button>
+        <button class="submit" type="submit">Send</button>
       </form>
     </ui-container-box>
   </section>
@@ -120,9 +120,6 @@ const form = reactive<ContactEmailRef>({
 });
 
 const submit = () => {
-  console.log('FORM');
-  console.log(form);
-
   Object.values(form).forEach((section) => {
     Object.values(section).forEach((field) => {
       field?.checkStatus();
@@ -161,6 +158,7 @@ const submit = () => {
     align-self: flex-start;
     gap: 1rem;
     padding-top: 6rem;
+    padding-bottom: 4rem;
     width: 24rem;
   }
 
@@ -179,10 +177,36 @@ const submit = () => {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
+        h3 {
+          text-transform: uppercase;
+        }
       }
 
       .request {
         grid-column: span 2;
+      }
+
+      .submit {
+        justify-self: flex-start;
+        padding: 0.5rem 1rem;
+        background-color: $blue-dark;
+        color: $white-light;
+        border-radius: $radius-lg;
+        @add-mixin shadow;
+
+        @add-mixin transition-bounce 0.4s, 1.1;
+        transition-property: all;
+
+        &:hover {
+          background-color: $blue-light;
+          color: $blue-dark;
+          scale: 1.05;
+        }
+        &:focus {
+          outline-color: $gold-light;
+          scale: 1.05;
+        }
       }
     }
   }

@@ -71,7 +71,7 @@
     @add-mixin container;
 
     p {
-      white-space: pre;
+      white-space: pre-wrap;
       text-wrap: wrap;
     }
   }

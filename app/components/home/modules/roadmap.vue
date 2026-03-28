@@ -30,7 +30,7 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  padding: 3rem 3rem 3rem 6rem;
+  padding: 3rem 6rem 3rem 6rem;
 
   .header {
     @add-mixin container;
@@ -81,6 +81,49 @@
       svg {
         width: 100%;
         height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .roadmap {
+    padding: 2rem;
+
+    .header {
+      .objectives {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+        padding: 1rem;
+      }
+    }
+
+    .full {
+      height: 6vw;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .roadmap {
+    padding: 1.5rem 1rem;
+
+    .header {
+      .objectives {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+      }
+    }
+
+    .full {
+      height: 8vw;
+
+      .background {
+        right: -1rem;
+        width: 70vw;
       }
     }
   }

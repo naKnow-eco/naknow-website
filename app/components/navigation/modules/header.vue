@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-const opened = ref(false);
+const opened = ref(true);
 
 const links = computed(() => (opened.value
   ? [

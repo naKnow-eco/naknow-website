@@ -1,7 +1,7 @@
 <template>
   <section class="roadmap" id="mission">
     <div class="header">
-      <h2>{{ $t('home.roadmap.title') }}</h2>
+      <h2>{{ $t("home.roadmap.title") }}</h2>
       <div class="objectives">
         <home-components-objectives-card
           v-for="(card, key) in $tm('home.roadmap.objectives')"
@@ -31,12 +31,15 @@
   gap: 2rem;
   align-items: center;
   padding: 3rem 6rem 3rem 6rem;
+  min-width: 0;
+  overflow-x: hidden;
 
   .header {
     @add-mixin container;
 
     h2 {
       margin: 0;
+      text-transform: none;
     }
 
     .objectives {
@@ -50,7 +53,14 @@
   }
 
   .graph {
-    width: 100%;
+    width: calc(100% + 12rem);
+    margin-left: -6rem;
+    max-width: 100vw;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .full {
@@ -64,7 +74,7 @@
     .background {
       position: absolute;
       bottom: 0;
-      right: -3rem;
+      right: -6rem;
       height: auto;
       width: 50vw;
       z-index: -1;
@@ -99,8 +109,18 @@
       }
     }
 
+    .graph {
+      width: calc(100% + 4rem);
+      margin-left: -2rem;
+      max-width: 100vw;
+    }
+
     .full {
       height: 6vw;
+
+      .background {
+        right: -2rem;
+      }
     }
   }
 }
@@ -115,6 +135,12 @@
       margin-top: 1.5rem;
       padding: 0.5rem;
     }
+  }
+
+  .graph {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    max-width: 100vw;
   }
 
   .full {

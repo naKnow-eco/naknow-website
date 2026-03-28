@@ -16,6 +16,7 @@
 .layout {
   display: flex;
   flex-direction: column;
+  color: $blue-dark;
   overflow: hidden;
 
   & > main {

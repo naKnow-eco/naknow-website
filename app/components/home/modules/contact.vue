@@ -219,25 +219,23 @@ const submit = () => {
   }
 }
 
-@media (max-width: 640px) {
-  .contact {
-    padding-left: 1rem;
-    padding-right: 1rem;
+@media (max-width: 640px), :global(.mobile) .contact {
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-    .header {
-      padding-top: 2rem;
-    }
+  .header {
+    padding-top: 2rem;
+  }
 
-    .contact-form {
-      margin-bottom: 2rem;
+  .contact-form {
+    margin-bottom: 2rem;
 
-      form {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    form {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
 
-        .request {
-          grid-column: span 1;
-        }
+      .request {
+        grid-column: span 1;
       }
     }
   }

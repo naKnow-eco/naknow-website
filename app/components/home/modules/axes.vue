@@ -73,26 +73,24 @@
   }
 }
 
-@media (max-width: 640px) {
-  .axes {
-    padding: 1.5rem 1rem;
-    gap: 1.5rem;
+@media (max-width: 640px), :global(.mobile) .axes {
+  padding: 1.5rem 1rem;
+  gap: 1.5rem;
 
-    h2 {
-      font-size: $text-lg;
-    }
+  h2 {
+    font-size: $text-lg;
+  }
 
-    .tiles {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding-left: 0;
-      padding-right: 0;
-    }
+  .tiles {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    .background {
-      display: none;
-    }
+  .background {
+    display: none;
   }
 }
 </style>

@@ -156,54 +156,52 @@
   }
 }
 
-@media (max-width: 640px) {
-  .scope {
-    padding: 1.5rem 1rem;
+@media (max-width: 640px), :global(.mobile) .scope {
+  padding: 1.5rem 1rem;
 
-    .header {
-      h1 {
-        width: auto;
-        text-align: center;
-      }
-
-      .home-lines {
-        height: 3rem;
-      }
+  .header {
+    h1 {
+      width: auto;
+      text-align: center;
     }
 
-    .hr {
-      margin-bottom: 2rem;
+    .home-lines {
+      height: 3rem;
+    }
+  }
+
+  .hr {
+    margin-bottom: 2rem;
+  }
+
+  .more {
+    height: auto;
+    min-height: 50vh;
+    flex-direction: column;
+
+    .background {
+      display: none;
     }
 
-    .more {
-      height: auto;
-      min-height: 50vh;
-      flex-direction: column;
-
-      .background {
-        display: none;
-      }
-
-      .bottom {
-        position: relative;
-        transform: none;
-        width: 100%;
-        bottom: auto;
-        left: auto;
-      }
+    .bottom {
+      position: relative;
+      transform: none;
+      width: 100%;
+      bottom: auto;
+      left: auto;
     }
+  }
 
-    .equipments {
-      width: 95%;
-      transform: translateY(0);
-      padding: 1rem;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+  .equipments {
+    width: 95%;
+    transform: translateY(0);
+    padding: 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 
-      svg {
-        width: 15%;
-        min-width: 2rem;
-      }
+    svg {
+      width: 15%;
+      min-width: 2rem;
     }
   }
 }

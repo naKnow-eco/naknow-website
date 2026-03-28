@@ -105,26 +105,24 @@
   }
 }
 
-@media (max-width: 640px) {
-  .roadmap {
-    padding: 1.5rem 1rem;
+@media (max-width: 640px), :global(.mobile) .roadmap {
+  padding: 1.5rem 1rem;
 
-    .header {
-      .objectives {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-        padding: 0.5rem;
-      }
+  .header {
+    .objectives {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      padding: 0.5rem;
     }
+  }
 
-    .full {
-      height: 8vw;
+  .full {
+    height: 8vw;
 
-      .background {
-        right: -1rem;
-        width: 70vw;
-      }
+    .background {
+      right: -1rem;
+      width: 70vw;
     }
   }
 }

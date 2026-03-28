@@ -79,10 +79,11 @@ defineExpose({
   }
 
   input, textarea {
+    width: 100%;
     border: 1px solid $blue-light;
     padding: 0.5rem;
     border-radius: $radius-md;
-
+    box-sizing: border-box;
     color: $blue-dark;
 
     &:focus {

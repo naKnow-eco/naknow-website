@@ -143,7 +143,7 @@ const submit = () => {
 .contact {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
@@ -153,21 +153,18 @@ const submit = () => {
   box-sizing: border-box;
 
   .header {
-    position: sticky;
-    top: 6rem;
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
     gap: 1rem;
     padding-top: 6rem;
-    padding-bottom: 4rem;
-    width: 24rem;
+    width: 100%;
   }
 
   .contact-form {
     flex: 1;
+    min-width: 0;
+    width: 100%;
     position: relative;
-    margin-top: 6rem;
     margin-bottom: 3rem;
     z-index: 1;
 
@@ -209,6 +206,37 @@ const submit = () => {
         &:focus {
           outline-color: $gold-light;
           scale: 1.05;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contact {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .header {
+      padding-top: 2rem;
+    }
+
+    .contact-form {
+      margin-bottom: 2rem;
+
+      form {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+
+        .request {
+          grid-column: span 1;
         }
       }
     }

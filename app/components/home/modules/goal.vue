@@ -134,7 +134,7 @@
       position: absolute;
       right: 14rem;
       top: -10rem;
-      width: 26rem;
+      width: 30rem;
       z-index: 2;
 
       li {
@@ -151,8 +151,8 @@
       .dataset {
         position: absolute;
         width: 40%;
-        z-index: 0;
-        top: 0;
+        z-index: 2;
+        top: 8rem;
         left: 8rem;
 
         h3 {

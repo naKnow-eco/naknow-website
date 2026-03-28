@@ -167,7 +167,8 @@ const submit = () => {
   .contact-form {
     flex: 1;
     position: relative;
-    top: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
     z-index: 1;
 
     form {

@@ -70,6 +70,10 @@
     color: $blue-dark;
     @add-mixin container;
 
+    h2 {
+      font-size: $text-2xl;
+    }
+
     p {
       white-space: pre-wrap;
       text-wrap: wrap;
@@ -82,7 +86,7 @@
     padding-top: 2rem;
     height: 50vw;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 
     .background {
@@ -111,11 +115,12 @@
   .equipments {
     display: flex;
     width: clamp(60%, 60rem, 100%);
+    margin-top: 2rem;
     padding: 1.5rem;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    transform: translateY(-60%);
+    transform: translateY(-30%);
     background-color: $blue-dark;
     border-radius: $radius-3xl;
 
@@ -123,6 +128,82 @@
       width: 12%;
       height: auto;
       color: $blue-light;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .scope {
+    padding: 2rem 3rem;
+
+    .hr {
+      margin-bottom: 3rem;
+    }
+
+    .more {
+      height: 60vw;
+
+      .background {
+        left: -3rem;
+        width: 40vw;
+      }
+    }
+
+    .equipments {
+      padding: 1rem;
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .scope {
+    padding: 1.5rem 1rem;
+
+    .header {
+      h1 {
+        width: auto;
+        text-align: center;
+      }
+
+      .home-lines {
+        height: 3rem;
+      }
+    }
+
+    .hr {
+      margin-bottom: 2rem;
+    }
+
+    .more {
+      height: auto;
+      min-height: 50vh;
+      flex-direction: column;
+
+      .background {
+        display: none;
+      }
+
+      .bottom {
+        position: relative;
+        transform: none;
+        width: 100%;
+        bottom: auto;
+        left: auto;
+      }
+    }
+
+    .equipments {
+      width: 95%;
+      transform: translateY(0);
+      padding: 1rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+      svg {
+        width: 15%;
+        min-width: 2rem;
+      }
     }
   }
 }

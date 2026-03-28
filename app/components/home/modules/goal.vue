@@ -84,6 +84,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding-left: 6rem;
 
   .open {
     position: relative;
@@ -93,6 +94,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding-left: 0;
 
     .description-card {
       position: absolute;
@@ -125,6 +127,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding-left: 0;
 
     .models {
       position: absolute;
@@ -243,6 +246,7 @@
     .conclusion {
       width: 28rem;
       transform: translateX(20%);
+      padding-left: 3rem;
     }
 
     .background {

@@ -76,7 +76,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: end;
+    text-align: center;
     transform: translate(-66%, -48%);
     z-index: 1;
 
@@ -86,7 +86,7 @@
     }
 
     :deep(.inner-box) {
-      padding: 2rem 3rem 2rem 1rem;
+      padding: 2rem;
     }
   }
 
@@ -102,7 +102,7 @@
     z-index: -1;
 
     :deep(.inner-box) {
-      padding: 2rem 2rem 2rem 3rem;
+      padding: 2rem;
     }
   }
 }

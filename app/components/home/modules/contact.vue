@@ -147,8 +147,8 @@ const submit = () => {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
-
-  @add-mixin container;
+  width: 100%;
+  padding-left: 6rem;
 
   .header {
     position: sticky;

@@ -30,8 +30,12 @@ import { PARTNERS } from '@/domains/partners';
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  width: 100%;
+  padding-left: 6rem;
 
-  @add-mixin container;
+  h2 {
+    align-self: flex-start;
+  }
 
   .tiles {
     padding: 2rem;

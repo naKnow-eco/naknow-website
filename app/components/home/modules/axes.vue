@@ -21,18 +21,25 @@
 <style scoped lang="postcss">
 .axes {
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4rem;
   padding-top: 2rem;
   padding-bottom: 6rem;
-  @add-mixin container;
+  padding-left: 6rem;
+
+  h2 {
+    align-self: flex-start;
+  }
 
   .tiles {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 4rem;
+    padding-left: clamp(0.5rem, 3vw, 2rem);
+    padding-right: clamp(0.5rem, 3vw, 2rem);
   }
 
   .background {

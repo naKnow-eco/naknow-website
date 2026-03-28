@@ -30,12 +30,17 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  padding: 3rem;
+  padding: 3rem 3rem 3rem 6rem;
 
   .header {
     @add-mixin container;
 
+    h2 {
+      margin: 0;
+    }
+
     .objectives {
+      margin-top: 4rem;
       width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);

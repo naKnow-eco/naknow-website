@@ -179,11 +179,12 @@
       width: 100%;
       height: 26rem;
       margin-top: -2rem;
+      container-type: size;
 
       .tile {
         position: absolute;
         width: 20%;
-        container-type: inline-size;
+        container-type: size;
 
         h3 {
           height: 5rem;
@@ -192,7 +193,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: clamp(1rem, 5cqi, 1.75rem);
+          font-size: clamp(1rem, 5cqmin, 1.75rem);
           line-height: 1.3;
           margin: 0;
           padding: 0.5rem;
@@ -201,20 +202,20 @@
 
         &:nth-child(1) {
           top: 0;
-          left: calc(50% - 6rem);
+          left: calc(50% - 10cqmin);
         }
         &:nth-child(2) {
           top: 0;
-          left: calc(50% - 12rem);
+          left: calc(50% - 30cqmin);
           transform: translateX(-100%);
         }
         &:nth-child(3) {
-          top: 14rem;
-          left: calc(22% + 6rem);
+          top: 50cqmin;
+          left: calc(22% + 15cqmin);
         }
         &:nth-child(4) {
-          top: 14rem;
-          right: 12rem;
+          top: 50cqmin;
+          left: 62%;
         }
       }
     }

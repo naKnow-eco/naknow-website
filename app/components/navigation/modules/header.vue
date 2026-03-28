@@ -8,41 +8,58 @@
         </navigation-components-page-link>
       </li>
     </transition-group>
-    <svgo-navigation-header-menu
+    <span
       class="menu-icon"
-      filled
+      :class="{ open: opened }"
       @click="opened = !opened"
-    />
+    >
+      <svgo-navigation-header-menu filled />
+    </span>
   </header>
 </template>
 
 <script setup lang="ts">
 const opened = ref(true);
 
-const links = computed(() => (opened.value
-  ? [
-    {
-      name: $t('header.links.contact'),
-      href: '#contact',
-    },
-    {
-      name: $t('header.links.methods'),
-      href: '#methods',
-    },
-    {
-      name: $t('header.links.outputs'),
-      href: '#outputs',
-    },
-    {
-      name: $t('header.links.mission'),
-      href: '#mission',
-    },
-    {
-      name: $t('header.links.about'),
-      href: '#about',
-    },
-  ]
-  : []));
+const checkScreenWidth = () => {
+  opened.value = window.innerWidth >= 800;
+};
+
+onMounted(() => {
+  checkScreenWidth();
+  window.addEventListener("resize", checkScreenWidth);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", checkScreenWidth);
+});
+
+const links = computed(() =>
+  opened.value
+    ? [
+        {
+          name: $t("header.links.contact"),
+          href: "#contact",
+        },
+        {
+          name: $t("header.links.methods"),
+          href: "#methods",
+        },
+        {
+          name: $t("header.links.outputs"),
+          href: "#outputs",
+        },
+        {
+          name: $t("header.links.mission"),
+          href: "#mission",
+        },
+        {
+          name: $t("header.links.about"),
+          href: "#about",
+        },
+      ]
+    : [],
+);
 </script>
 
 <style scoped lang="postcss">
@@ -71,11 +88,21 @@ header {
   }
 
   .menu-icon {
+    display: inline-flex;
     width: 2rem;
     height: 2rem;
     color: $blue-dark;
     cursor: pointer;
-    transform: translateY(0.125rem);
+    transition: transform 0.3s ease;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.open {
+      transform: rotate(180deg);
+    }
   }
 
   .logo {

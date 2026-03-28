@@ -111,6 +111,7 @@
       gap: 4rem;
 
       img {
+        width: 100%;
         border-radius: $radius-lg;
         aspect-ratio: 1 / 1;
         flex-shrink: 1;

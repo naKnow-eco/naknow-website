@@ -149,6 +149,8 @@ const submit = () => {
   gap: 2rem;
   width: 100%;
   padding-left: 6rem;
+  padding-right: 6rem;
+  box-sizing: border-box;
 
   .header {
     position: sticky;

@@ -1,9 +1,9 @@
 <template>
   <section class="goal" id="outputs">
     <div class="open">
-      <h2>{{ $t('home.goal.title') }}</h2>
+      <h2>{{ $t("home.goal.title") }}</h2>
       <ui-container-box class="description-card" color="white" spacing="lg">
-        <h3>{{ $t('home.goal.open.title') }}</h3>
+        <h3>{{ $t("home.goal.open.title") }}</h3>
         <ul>
           <li v-for="(item, key) in $tm('home.goal.open.values')" :key="key">
             {{ $rt(item) }}
@@ -26,63 +26,50 @@
       </ui-container-box>
       <div class="goal-points">
         <ui-container-box class="dataset" color="light" spacing="lg">
-          <h3>{{ $t('home.goal.dataset.title') }}</h3>
+          <h3>{{ $t("home.goal.dataset.title") }}</h3>
           <ul>
-            <li v-for="(item, key) in $tm('home.goal.dataset.values')" :key="key">
+            <li
+              v-for="(item, key) in $tm('home.goal.dataset.values')"
+              :key="key"
+            >
               {{ $rt(item) }}
             </li>
           </ul>
           <div class="links">
             <ui-container-box color="gold">
-              <ui-button-external-link translation="home.goal.dataset.knowledge" />
+              <ui-button-external-link
+                translation="home.goal.dataset.knowledge"
+              />
             </ui-container-box>
             <ui-container-box color="gold">
-              <ui-button-external-link translation="home.goal.dataset.environmental" />
+              <ui-button-external-link
+                translation="home.goal.dataset.environmental"
+              />
             </ui-container-box>
           </div>
         </ui-container-box>
       </div>
       <svgo-home-goal-earth filled class="earth" />
       <div class="other-points" id="methods">
-        <ui-container-box
-          color="dark"
-          class="tile"
-          spacing="lg"
-        >
-          <h3>{{ $t('home.goal.other.review') }}</h3>
+        <ui-container-box color="dark" class="tile" spacing="lg">
+          <h3>{{ $t("home.goal.other.review") }}</h3>
         </ui-container-box>
-        <ui-container-box
-          color="dark"
-          class="tile"
-          spacing="lg"
-        >
-          <h3>{{ $t('home.goal.other.modelling') }}</h3>
+        <ui-container-box color="dark" class="tile" spacing="lg">
+          <h3>{{ $t("home.goal.other.modelling") }}</h3>
         </ui-container-box>
-        <ui-container-box
-          color="dark"
-          class="tile"
-          spacing="lg"
-        >
-          <h3>{{ $t('home.goal.other.analyses') }}</h3>
+        <ui-container-box color="dark" class="tile" spacing="lg">
+          <h3>{{ $t("home.goal.other.analyses") }}</h3>
         </ui-container-box>
-        <ui-container-box
-          color="dark"
-          class="tile"
-          spacing="lg"
-        >
-          <h3>{{ $t('home.goal.other.documentation') }}</h3>
+        <ui-container-box color="dark" class="tile" spacing="lg">
+          <h3>{{ $t("home.goal.other.documentation") }}</h3>
         </ui-container-box>
         <div class="arrows">
           <svgo-home-goal-line-angle filled />
           <svgo-home-goal-line-angle filled />
         </div>
       </div>
-      <ui-container-box
-        class="conclusion"
-        color="light"
-        spacing="lg"
-      >
-        <h3>{{ $t('home.goal.conclusion') }}</h3>
+      <ui-container-box class="conclusion" color="light" spacing="lg">
+        <h3>{{ $t("home.goal.conclusion") }}</h3>
       </ui-container-box>
       <ui-icon-lines class="background" />
     </div>
@@ -178,7 +165,6 @@
           transform: translateY(100%);
         }
       }
-
     }
 
     .earth {
@@ -197,10 +183,19 @@
       .tile {
         position: absolute;
         width: 20%;
+        container-type: inline-size;
 
         h3 {
           height: 5rem;
           color: $white-light;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: clamp(1rem, 5cqi, 1.75rem);
+          line-height: 1.3;
+          margin: 0;
+          padding: 0.5rem;
         }
         @add-mixin shadow;
 
@@ -222,7 +217,6 @@
           right: 12rem;
         }
       }
-
     }
 
     .arrows {

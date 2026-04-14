@@ -23,9 +23,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: clamp(20rem, 50%, 60rem);
+    width: clamp(28rem, 75%, 60rem);
     padding: 6rem;
     gap: 2rem;
+    z-index: 1;
+
+    @add-mixin media tablet { padding: 4rem; }
+    @add-mixin media mobile { padding: 3rem; }
 
     .title {
       color: $white-light;

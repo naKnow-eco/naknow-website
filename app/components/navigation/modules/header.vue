@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{ open: opened }">
     <img class="logo" src="/naknow.svg" alt="naknow logo" />
     <transition-group tag="ul" name="link">
       <li v-for="link in links" :key="link.href" class="link">
@@ -10,7 +10,6 @@
     </transition-group>
     <span
       class="menu-icon"
-      :class="{ open: opened }"
       @click="opened = !opened"
     >
       <svgo-navigation-header-menu filled />
@@ -19,47 +18,33 @@
 </template>
 
 <script setup lang="ts">
-const opened = ref(true);
+const opened = ref(false);
 
-const checkScreenWidth = () => {
-  opened.value = window.innerWidth >= 800;
-};
-
-onMounted(() => {
-  checkScreenWidth();
-  window.addEventListener("resize", checkScreenWidth);
+const links = computed(() => {
+  if (!opened.value) return [];
+  return [
+    {
+      name: $t('header.links.contact'),
+      href: '#contact',
+    },
+    {
+      name: $t('header.links.methods'),
+      href: '#methods',
+    },
+    {
+      name: $t('header.links.outputs'),
+      href: '#outputs',
+    },
+    {
+      name: $t('header.links.mission'),
+      href: '#mission',
+    },
+    {
+      name: $t('header.links.about'),
+      href: '#about',
+    },
+  ];
 });
-
-onUnmounted(() => {
-  window.removeEventListener("resize", checkScreenWidth);
-});
-
-const links = computed(() =>
-  opened.value
-    ? [
-        {
-          name: $t("header.links.contact"),
-          href: "#contact",
-        },
-        {
-          name: $t("header.links.methods"),
-          href: "#methods",
-        },
-        {
-          name: $t("header.links.outputs"),
-          href: "#outputs",
-        },
-        {
-          name: $t("header.links.mission"),
-          href: "#mission",
-        },
-        {
-          name: $t("header.links.about"),
-          href: "#about",
-        },
-      ]
-    : [],
-);
 </script>
 
 <style scoped lang="postcss">
@@ -81,6 +66,8 @@ header {
     align-items: center;
     gap: 1.5rem;
     padding-right: 1.25rem;
+    transition: transform 0.5s ease;
+    transform: translateX(1rem);
 
     li {
       list-style: none;
@@ -98,16 +85,34 @@ header {
     svg {
       width: 100%;
       height: 100%;
+      transform: translateY(0.125rem);
     }
 
-    &.open {
-      transform: rotate(180deg);
-    }
   }
 
   .logo {
     height: 10rem;
-    transform: translateY(2rem);
+  }
+
+  &.open {
+    ul {
+      transform: translateX(0);
+    }
+    .menu-icon {
+      transform: scaleX(-1) translateX(25%);
+    }
+  }
+}
+
+.link {
+  &-enter-active,
+  &-leave-active {
+    transition: all 0.3s ease;
+    transition-delay: 0.2s;
+  }
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
   }
 }
 </style>

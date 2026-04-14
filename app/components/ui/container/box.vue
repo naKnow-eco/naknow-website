@@ -11,7 +11,7 @@
     ]">
       <slot />
     </div>
-    <ui-icon-lines v-if="shadowLine" :class="['shadow-line', shadowLine]" />
+    <ui-icon-lines v-if="shadowLine" :class="['shadow-line', shadowLine]" :scale="0.6" />
   </div>
 </template>
 
@@ -63,6 +63,8 @@ withDefaults(defineProps<{
     .inner-box {
       padding: 2rem;
       border-radius: $radius-lg;
+      @add-mixin media tablet { padding: 1.75rem; }
+      @add-mixin media mobile { padding: 1.5rem; }
     }
 
     .shadow-line {
@@ -76,6 +78,8 @@ withDefaults(defineProps<{
     .inner-box {
       padding: 4rem;
       border-radius: $radius-xl;
+      @add-mixin media tablet { padding: 3rem; }
+      @add-mixin media mobile { padding: 2rem; }
     }
 
     .shadow-line {

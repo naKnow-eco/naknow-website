@@ -13,10 +13,8 @@
     <div class="more">
       <home-components-scope-details />
       <svgo-home-scope-background filled class="background" />
-      <div class="bottom">
-        <svgo-home-bottom filled />
-        <svgo-home-doted-line filled />
-      </div>
+      <svgo-home-bottom filled class="background-bottom" />
+      <svgo-home-doted-line filled class="separator-bottom" />
     </div>
     <div class="equipments">
       <svgo-home-scope-equipments-optical filled />
@@ -84,7 +82,7 @@
     position: relative;
     display: flex;
     padding-top: 2rem;
-    height: 50vw;
+    padding-bottom: 8rem;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -94,115 +92,48 @@
       bottom: 0;
       left: -6rem;
       height: auto;
-      width: 50vw;
+      width: clamp(30rem, 50vw, 60rem);
       z-index: -1;
     }
-    .bottom {
-      position: absolute;
-      bottom: 2.2rem;
-      left: 50%;
-      transform: translate(-50%, 100%);
-      height: auto;
-      width: calc(100vw - 1rem);
-      z-index: -1;
 
-      svg {
-        width: 100%;
-        height: auto;
-      }
+    .background-bottom {
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: auto;
+      width: 100vw;
+      z-index: -1;
+    }
+
+    .separator-bottom {
+      position: absolute;
+      bottom: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      height: auto;
+      width: 100vw;
+      z-index: -1;
     }
   }
   .equipments {
     display: flex;
-    width: clamp(60%, 60rem, 100%);
-    margin-top: 2rem;
     padding: 1.5rem;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: fit-content;
+    transform: translateY(-60%);
     gap: 1rem;
-    transform: translateY(-30%);
     background-color: $blue-dark;
     border-radius: $radius-3xl;
 
     svg {
-      width: 12%;
+      width: max(4rem, 12%);
       height: auto;
       color: $blue-light;
     }
   }
 }
 
-@media (max-width: 800px) {
-  .scope {
-    padding: 2rem 3rem;
-
-    .hr {
-      margin-bottom: 3rem;
-    }
-
-    .more {
-      height: 60vw;
-
-      .background {
-        left: -3rem;
-        width: 40vw;
-      }
-    }
-
-    .equipments {
-      padding: 1rem;
-      gap: 0.5rem;
-    }
-  }
-}
-
-@media (max-width: 640px), :global(.mobile) .scope {
-  padding: 1.5rem 1rem;
-
-  .header {
-    h1 {
-      width: auto;
-      text-align: center;
-    }
-
-    .home-lines {
-      height: 3rem;
-    }
-  }
-
-  .hr {
-    margin-bottom: 2rem;
-  }
-
-  .more {
-    height: auto;
-    min-height: 50vh;
-    flex-direction: column;
-
-    .background {
-      display: none;
-    }
-
-    .bottom {
-      position: relative;
-      transform: none;
-      width: 100%;
-      bottom: auto;
-      left: auto;
-    }
-  }
-
-  .equipments {
-    width: 95%;
-    transform: translateY(0);
-    padding: 1rem;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-
-    svg {
-      width: 15%;
-      min-width: 2rem;
-    }
-  }
-}
 </style>

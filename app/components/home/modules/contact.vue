@@ -211,33 +211,4 @@ const submit = () => {
     }
   }
 }
-
-@media (max-width: 800px) {
-  .contact {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-
-@media (max-width: 640px), :global(.mobile) .contact {
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  .header {
-    padding-top: 2rem;
-  }
-
-  .contact-form {
-    margin-bottom: 2rem;
-
-    form {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-
-      .request {
-        grid-column: span 1;
-      }
-    }
-  }
-}
 </style>

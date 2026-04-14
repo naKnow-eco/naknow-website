@@ -33,13 +33,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 12rem 0 12rem 0;
+  padding-top: 12rem;
+  padding-bottom: 16rem;
 }
 
 .details {
   position: relative;
   width: clamp(16rem, 25vw, 26rem);
   aspect-ratio: 1 / 1;
+  transform: translateX(22%);
 
   img {
     position: absolute;
@@ -73,7 +75,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: translate(-66%, -48%);
+    transform: translate(-50%, -50%);
     z-index: 1;
     container-type: inline-size;
 
@@ -84,22 +86,18 @@
       line-height: 1.3;
       margin: 0;
     }
-
-    :deep(.inner-box) {
-      padding: 1rem;
-    }
   }
 
   .box-2.box {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: clamp(16rem, 22vw, 26rem);
+    width: clamp(16rem, 33vw, 26rem);
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translate(90%, 50%);
-    z-index: 2;
+    z-index: -1;
     container-type: inline-size;
 
     ul {
@@ -112,69 +110,24 @@
       font-size: clamp(1rem, 5cqw, 1.25rem);
       line-height: 1.4;
     }
-
-    :deep(.inner-box) {
-      padding: 1rem;
-    }
-  }
-}
-
-@media (max-width: 800px) {
-  .details-wrapper {
-    padding: 6rem 0;
-    min-height: 60vh;
   }
 
-  .details {
-    .box-1.box {
-      transform: translate(-50%, -30%);
-    }
-
+  @add-mixin media tablet {
     .box-2.box {
-      transform: translate(50%, 60%);
+      transform: translate(50%, 90%);
     }
   }
-}
 
-@media (max-width: 640px), :global(.mobile) .details-wrapper {
-  padding: 8rem 1rem;
-  min-height: auto;
-}
+  @add-mixin media mobile {
+    .box-2.box {
+      transform: translate(20%, 90%);
 
-@media (max-width: 640px), :global(.mobile) .details-wrapper .details {
-  width: 100%;
-  aspect-ratio: auto;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-
-  img {
-    position: relative;
-    width: 60%;
-    scale: 1;
-    transform: none;
-  }
-
-  .background {
-    display: none;
-  }
-
-  .box-1.box {
-    position: relative;
-    transform: none;
-    width: 90%;
-    top: auto;
-    left: auto;
-  }
-
-  .box-2.box {
-    position: relative;
-    transform: none;
-    width: 90%;
-    bottom: auto;
-    right: auto;
+      &:deep(.shadow-line) {
+        top: -2rem;
+        right: -1rem;
+        left: inherit;
+      }
+    }
   }
 }
 </style>

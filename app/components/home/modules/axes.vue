@@ -57,40 +57,4 @@
     }
   }
 }
-
-@media (max-width: 800px) {
-  .axes {
-    padding-left: 3rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 4rem;
-    gap: 2rem;
-
-    .tiles {
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-  }
-}
-
-@media (max-width: 640px), :global(.mobile) .axes {
-  padding: 1.5rem 1rem;
-  gap: 1.5rem;
-
-  h2 {
-    font-size: $text-lg;
-  }
-
-  .tiles {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .background {
-    display: none;
-  }
-}
 </style>

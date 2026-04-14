@@ -19,6 +19,15 @@ h3 { @add-mixin h3; }
   :root { font-size: 80%; }
 }
 
+@add-mixin media tablet {
+  :root { font-size: 90%; }
+}
+
+@add-mixin media gt-QHD {
+  :root { font-size: 150%; }
+}
+
+
 main {
   display: flex;
   flex-direction: column;

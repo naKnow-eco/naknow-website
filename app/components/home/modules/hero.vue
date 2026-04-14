@@ -28,8 +28,14 @@
     gap: 2rem;
     z-index: 1;
 
-    @add-mixin media tablet { padding: 4rem; }
-    @add-mixin media mobile { padding: 3rem; }
+    @add-mixin media tablet {
+      padding: 4rem;
+      padding-bottom: 6rem;
+    }
+    @add-mixin media mobile {
+      padding: 3rem;
+      padding-bottom: 6rem;
+    }
 
     .title {
       color: $white-light;

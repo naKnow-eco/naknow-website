@@ -28,7 +28,7 @@
 
 <style scoped lang="postcss">
 .scope {
-  padding: 3rem 6rem;
+  padding: 3rem clamp(2rem, 6vw, 6rem);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
 
     h1 {
       color: $blue-dark;
-      width: 33%;
+      width: max(33%, 16rem);
     }
 
     .home-lines {
@@ -92,7 +92,7 @@
       bottom: 0;
       left: -6rem;
       height: auto;
-      width: clamp(30rem, 50vw, 60rem);
+      width: clamp(32rem, 50vw, 52rem);
       z-index: -1;
     }
 
@@ -116,13 +116,14 @@
       z-index: -1;
     }
   }
+
   .equipments {
     display: flex;
     padding: 1.5rem;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: fit-content;
+    width: clamp(65%, 52rem, 100%);
     transform: translateY(-60%);
     gap: 1rem;
     background-color: $blue-dark;

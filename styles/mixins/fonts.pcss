@@ -10,8 +10,6 @@
     font-weight: 600;
     line-height: normal;
     text-align: center;
-    @add-mixin media tablet { font-size: $text-3xl; }
-    @add-mixin media mobile { font-size: $text-2xl; }
 }
 
 @define-mixin h2 {
@@ -24,9 +22,6 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-
-    @add-mixin media tablet { font-size: $text-2xl; }
-    @add-mixin media mobile { font-size: $text-xl; }
 }
 
 @define-mixin h3 {
@@ -36,9 +31,6 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-
-    @add-mixin media tablet { font-size: $text-lg; }
-    @add-mixin media mobile { font-size: $text-lg; }
 }
 
 @define-mixin p {
@@ -48,7 +40,4 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
-
-    @add-mixin media tablet { font-size: $text-md; }
-    @add-mixin media mobile { font-size: $text-md; }
 }

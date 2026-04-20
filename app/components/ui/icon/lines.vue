@@ -20,13 +20,13 @@ withDefaults(defineProps<{
 .home-lines {
   overflow: hidden;
 
-  &.gold { color: $gold-light; }
-  &.blue { color: $blue-light; }
-
   svg {
     height: 3317px;
     width: 2763px;
     transform-origin: top left;
+
+    &.gold { color: $gold-light; }
+    &.blue { color: $blue-light; }
   }
 }
 </style>

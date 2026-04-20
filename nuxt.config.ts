@@ -79,6 +79,7 @@ export default defineNuxtConfig({
           ...(require('./styles/variables/z-index').default),
           ...(require('./styles/variables/media').default),
           ...(require('./styles/variables/radius').default),
+          ...(require('./styles/variables/size').default),
         },
       },
       'postcss-nested': {},

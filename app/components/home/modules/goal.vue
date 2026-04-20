@@ -71,7 +71,7 @@
       <ui-container-box class="conclusion" color="light" spacing="lg">
         <h3>{{ $t("home.goal.conclusion") }}</h3>
       </ui-container-box>
-      <ui-icon-lines class="background" />
+      <ui-icon-lines class="background" color="gold" />
     </div>
   </section>
 </template>
@@ -84,7 +84,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding-left: 6rem;
+  @add-mixin section-padding;
 
   .open {
     position: relative;
@@ -97,18 +97,24 @@
     padding-left: 0;
 
     .description-card {
-      position: absolute;
-      left: 0;
-      top: 0;
+      align-self: flex-start;
+      z-index: 1;
     }
 
     .images {
+      position: relative;
       width: 100%;
-      padding: 4rem;
+      top: clamp(-6rem, -6vw, -3rem);
+      padding: 0 clamp(0rem, 4vw, 4rem);
       display: grid;
-      grid-template-columns: repeat(3, 25%);
+      grid-template-columns: repeat(3, 1fr);
       justify-content: center;
-      gap: 4rem;
+      gap: clamp(1rem, 2vw, 2rem);
+      margin-bottom: clamp(-6rem, -6vw, -3rem);
+
+      @add-mixin media lt-SVGA {
+        z-index: 1;
+      }
 
       img {
         width: 100%;
@@ -132,10 +138,10 @@
 
     .models {
       position: absolute;
-      right: 14rem;
-      top: -10rem;
-      width: 30rem;
-      z-index: 2;
+      right: max(calc(14vw - 6rem), 0rem);
+      top: clamp(-6rem, -6vw, -3rem);
+      width: min(30rem, 90%);
+      z-index: 3;
 
       li {
         list-style-position: outside;
@@ -147,13 +153,14 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      height: calc(56rem - 52vw);
 
       .dataset {
         position: absolute;
-        width: 40%;
+        width: clamp(40%, 28rem, 90%);
         z-index: 2;
-        top: 8rem;
-        left: 8rem;
+        top: calc(14rem - 4vw);
+        left: $size-padding;
 
         h3 {
           color: $white-light;
@@ -175,7 +182,7 @@
       align-self: flex-end;
       width: 60%;
       height: auto;
-      z-index: 1;
+      z-index: 2;
     }
 
     .other-points {
@@ -254,7 +261,7 @@
       position: absolute;
       top: -12rem;
       left: 0;
-      width: 50%;
+      width: clamp(50%, 28rem, 80%);
       height: calc(100% + 8rem);
       z-index: $z-background;
     }

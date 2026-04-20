@@ -81,7 +81,7 @@ header {
       width: 100%;
       flex: 1;
       display: inline-flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: flex-end;
       gap: 1.5rem;
       padding: 1.25rem;

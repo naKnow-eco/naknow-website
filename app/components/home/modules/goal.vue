@@ -50,8 +50,8 @@
         </ui-container-box>
       </div>
       <svgo-home-goal-earth filled class="earth" />
-      <div class="other-points" id="methods">
-        <ui-container-box color="dark" class="tile" spacing="lg">
+      <div class="other-points">
+        <ui-container-box color="dark" class="tile" spacing="lg"  id="methods">
           <h3>{{ $t("home.goal.other.review") }}</h3>
         </ui-container-box>
         <ui-container-box color="dark" class="tile" spacing="lg">

@@ -11,9 +11,9 @@
         </ul>
       </ui-container-box>
       <div class="images">
-        <nuxt-img src="/img/manufacturing.jpg" />
-        <nuxt-img src="/img/circuit.jpg" />
-        <nuxt-img src="/img/environment.jpg" />
+        <nuxt-img src="/img/manufacturing.jpg" alt="Ruan Richard Rodrigues | unsplash.com" />
+        <nuxt-img src="/img/circuit.jpg" alt="Anne Nygård | unsplash.com" />
+        <nuxt-img src="/img/environment.jpg" alt="Vitaliy Naumenko | unsplash.com" />
       </div>
     </div>
     <div class="content">

@@ -8,7 +8,7 @@
       >
         <h4>{{ $t('home.scope.details.title') }}</h4>
       </ui-container-box>
-      <nuxt-img src="/img/hand.png" alt="Hand with cpu" />
+      <nuxt-img src="/img/hand.png" alt="Niek Doup | unsplash.com" />
       <div class="background" />
       <ui-container-box
         class="box-2"

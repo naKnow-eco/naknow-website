@@ -16,7 +16,7 @@
       </template>
     </div>
     <div class="background">
-      <nuxt-img src="/img/lens-background.png" />
+      <nuxt-img src="/img/lens-background.png" alt="Evie S | unsplash.com" />
     </div>
   </section>
 </template>

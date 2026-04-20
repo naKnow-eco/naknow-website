@@ -99,16 +99,23 @@
       height: fit-content;
       width: 100vw;
       position: relative;
-      bottom: calc(-1.675rem + 0.125vw);
+      bottom: -1rem;
+      height: 5rem;
       overflow: hidden;
 
       svg {
         width: 100%;
         height: auto;
+        position: absolute;
+        left: 0;
+      }
+
+      .waves {
+        bottom: 1rem;
       }
 
       .doted-line {
-        left: 0;
+        bottom: 0;
       }
     }
   }

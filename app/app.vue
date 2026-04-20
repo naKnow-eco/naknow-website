@@ -1,10 +1,10 @@
 <template>
   <client-only>
-    <nuxt-layout :name="device.isMobileOrTablet ? 'mobile' : 'default'">
+    <nuxt-layout :name="layout" :key="layout">
       <nuxt-page />
     </nuxt-layout>
     <template #fallback>
-      <nuxt-layout name="default">
+      <nuxt-layout name="default" key="default">
         <nuxt-page />
       </nuxt-layout>
     </template>
@@ -13,6 +13,8 @@
 
 <script setup lang="ts">
 const device = useDevice();
+
+const layout = computed(() => (device.isMobileOrTablet ? 'mobile' : 'default'));
 
 const {
   t, locale,

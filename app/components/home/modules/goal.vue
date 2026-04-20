@@ -187,55 +187,53 @@
 
     .other-points {
       position: relative;
-      width: 100%;
-      height: 26rem;
-      margin-top: -2rem;
-      container-type: size;
+      align-self: flex-end;
+      margin-right: 8vw;
+      margin-bottom: 6rem;
+      width: clamp(62%, 42rem, 80%);
+      margin-top: calc(4rem - 2vw);
 
       .tile {
         position: absolute;
-        width: 20%;
-        container-type: size;
-
-        h3 {
-          height: 5rem;
-          color: $white-light;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: clamp(1rem, 5cqmin, 1.75rem);
-          line-height: 1.3;
-          margin: 0;
-          padding: 0.5rem;
-        }
-        @add-mixin shadow;
+        max-width: clamp(33%, 18rem, 40%);
+        z-index: 3;
 
         &:nth-child(1) {
-          top: 0;
-          left: calc(50% - 10cqmin);
+          top: calc(4vw - 4rem);
+          left: 0;
+          transform: translate(-50%, -50%);
         }
         &:nth-child(2) {
-          top: 0;
-          left: calc(50% - 30cqmin);
-          transform: translateX(-100%);
+          top: calc(4vw - 4rem);
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
         &:nth-child(3) {
-          top: 50cqmin;
-          left: calc(22% + 15cqmin);
+          bottom: calc(4vw - 4rem);
+          left: 12%;
+          transform: translate(0, 50%);
         }
         &:nth-child(4) {
-          top: 50cqmin;
-          left: 62%;
+          bottom: calc(4vw - 4rem);
+          right: 0;
+          transform: translate(25%, 50%);
+        }
+
+        @add-mixin media tablet {
+          h3 {
+            font-size: 0.875rem;
+          }
+        }
+        @add-mixin media mobile {
+          h3 {
+            font-size: 0.75rem;
+          }
         }
       }
     }
 
     .arrows {
-      position: absolute;
-      top: 0;
-      left: 25%;
-      width: 62%;
+      width: 100%;
       z-index: -1;
       svg {
         position: absolute;
@@ -243,18 +241,19 @@
         height: auto;
 
         &:nth-child(1) {
-          transform: translate(0, -40%);
+          position: absolute;
+          transform: translateY(-100%);
         }
         &:nth-child(2) {
-          transform: translate(0, 80%) rotate(180deg) scaleY(-1);
+          position: relative;
+          transform: rotate(180deg) scaleY(-1);
         }
       }
     }
 
     .conclusion {
-      width: 28rem;
-      transform: translateX(20%);
-      padding-left: 3rem;
+      width: clamp(33%, 28rem, 100%);
+      transform: translateX(calc(10vw - 12.5%));
     }
 
     .background {

@@ -30,10 +30,12 @@
 
     @add-mixin media tablet {
       padding: 4rem;
+      padding-top: 6rem;
       padding-bottom: 6rem;
     }
     @add-mixin media mobile {
       padding: 3rem;
+      padding-top: 6rem;
       padding-bottom: 6rem;
     }
 

@@ -9,6 +9,10 @@ p, a, li, label, td {
 
 *[id] {
   scroll-margin-top: 6rem;
+
+  .layout.mobile & {
+    scroll-margin-top: 24rem;
+  }
 }
 
 h1 { @add-mixin h1; }

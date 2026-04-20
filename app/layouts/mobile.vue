@@ -1,8 +1,8 @@
 <template>
   <div class="layout mobile">
-    <navigation-modules-header>
+    <navigation-modules-header-mobile>
       <slot name="header" />
-    </navigation-modules-header>
+    </navigation-modules-header-mobile>
     <main>
       <slot />
     </main>

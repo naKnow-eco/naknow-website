@@ -5,9 +5,15 @@
 </template>
 
 <script setup lang="ts">
-const { isMobileOrTablet } = useDevice();
+const device = useDevice();
 
-const template = computed(() => (isMobileOrTablet ? 'mobile' : 'default'));
+const getTemplateName = () => (device.isMobileOrTablet ? 'mobile' : 'default');
+
+const template = ref<'mobile' | 'default'>(getTemplateName());
+
+onMounted(() => {
+  template.value = getTemplateName();
+});
 
 const {
   t, locale,

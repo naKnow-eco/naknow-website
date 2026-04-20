@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="layout" data-allow-mismatch="class">
     <navigation-modules-header>
       <slot name="header" />
     </navigation-modules-header>

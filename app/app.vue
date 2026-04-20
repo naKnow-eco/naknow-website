@@ -1,19 +1,18 @@
 <template>
-  <nuxt-layout :name="template">
-    <nuxt-page />
-  </nuxt-layout>
+  <client-only>
+    <nuxt-layout :name="device.isMobileOrTablet ? 'mobile' : 'default'">
+      <nuxt-page />
+    </nuxt-layout>
+    <template #fallback>
+      <nuxt-layout name="default">
+        <nuxt-page />
+      </nuxt-layout>
+    </template>
+  </client-only>
 </template>
 
 <script setup lang="ts">
 const device = useDevice();
-
-const getTemplateName = () => (device.isMobileOrTablet ? 'mobile' : 'default');
-
-const template = ref<'mobile' | 'default'>(getTemplateName());
-
-onMounted(() => {
-  template.value = getTemplateName();
-});
 
 const {
   t, locale,

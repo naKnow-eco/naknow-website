@@ -1,5 +1,5 @@
 <template>
-  <div class="layout mobile">
+  <div class="layout mobile" data-allow-mismatch="class">
     <navigation-modules-header-mobile>
       <slot name="header" />
     </navigation-modules-header-mobile>

@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ open: opened }">
+  <header :class="['header-mobile', { open: opened }]">
     <div class="menu">
       <img class="logo" src="/naknow.svg" alt="naknow logo" />
       <span
@@ -51,7 +51,7 @@ const links = computed(() => [
 </script>
 
 <style scoped lang="postcss">
-header {
+.header-mobile {
   display: flex;
   flex-direction: column;
   width: 100%;

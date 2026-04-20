@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ open: opened }">
+  <header :class="['header-desktop', { open: opened }]">
     <img class="logo" src="/naknow.svg" alt="naknow logo" />
     <transition-group tag="ul" name="link">
       <li v-for="link in links" :key="link.href" class="link">
@@ -48,12 +48,13 @@ const links = computed(() => {
 </script>
 
 <style scoped lang="postcss">
-header {
+.header-desktop {
   height: 5rem;
   background-color: $white-light;
   z-index: $z-header;
   position: sticky;
   top: 0;
+  width: 100%;
   padding: 1.5rem 3.5rem;
   display: flex;
   flex-direction: row;

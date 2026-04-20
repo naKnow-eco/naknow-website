@@ -17,8 +17,8 @@
     <div class="full">
       <svgo-home-roadmap-background filled class="background" />
       <div class="bottom">
-        <svgo-home-bottom filled />
-        <svgo-home-doted-line filled />
+        <svgo-home-bottom filled class="waves" />
+        <svgo-home-doted-line filled class="doted-line" />
       </div>
     </div>
   </section>
@@ -26,13 +26,14 @@
 
 <style scoped lang="postcss">
 .roadmap {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  padding: 3rem 6rem 3rem 6rem;
   min-width: 0;
   overflow-x: hidden;
+  @add-mixin section-padding;
 
   .header {
     @add-mixin container;
@@ -49,48 +50,65 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 4rem;
       padding: 2rem;
+
+      @add-mixin media tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-evenly;
+        & > * {
+          width: calc(40%);
+        }
+      }
+
+      @add-mixin media mobile {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
   .graph {
-    width: calc(100% + 12rem);
-    margin-left: -6rem;
-    max-width: 100vw;
+    width: 100%;
 
     img {
       width: 100%;
       height: auto;
+
+      @add-mixin media tablet { scale: 1.1; }
+      @add-mixin media mobile { scale: 1.2; }
     }
   }
 
   .full {
     position: relative;
     display: flex;
-    padding-top: 2rem;
-    height: 4vw;
-    width: 100%;
+    width: 100vw;
     z-index: 1;
 
     .background {
       position: absolute;
-      bottom: 0;
+      bottom: 1px;
       right: -6rem;
       height: auto;
       width: 50vw;
       z-index: -1;
     }
+
     .bottom {
-      position: absolute;
-      bottom: 2.2rem;
-      left: 50%;
-      transform: translate(-50%, 100%);
-      height: auto;
+      height: fit-content;
       width: 100vw;
-      z-index: -1;
+      position: relative;
+      bottom: calc(-1.675rem + 0.125vw);
+      overflow: hidden;
 
       svg {
         width: 100%;
         height: auto;
+      }
+
+      .doted-line {
+        left: 0;
       }
     }
   }

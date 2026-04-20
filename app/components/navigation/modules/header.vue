@@ -92,6 +92,7 @@ header {
 
   .logo {
     height: 10rem;
+    transform: translateY(2rem);
   }
 
   &.open {

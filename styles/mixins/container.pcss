@@ -4,10 +4,19 @@
   width: 100%;
 }
 
+@define-mixin section-padding {
+  padding: 3rem clamp(2rem, 6vw, 6rem);
+}
+
+@define-mixin section-container {
+  @add-mixin container;
+  @add-mixin section-padding;
+}
+
 @define-mixin page {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-
 }

@@ -120,7 +120,7 @@
 
   @add-mixin media mobile {
     .box-2.box {
-      transform: translate(20%, 90%);
+      transform: translate(6vw, 90%);
 
       &:deep(.shadow-line) {
         top: -2rem;

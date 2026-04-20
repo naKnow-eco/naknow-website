@@ -28,7 +28,7 @@
 
 <style scoped lang="postcss">
 .scope {
-  padding: 3rem clamp(2rem, 6vw, 6rem);
+  @add-mixin section-padding;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -108,7 +108,7 @@
 
     .separator-bottom {
       position: absolute;
-      bottom: -1.5rem;
+      bottom: -1.125rem;
       left: 50%;
       transform: translateX(-50%);
       height: auto;

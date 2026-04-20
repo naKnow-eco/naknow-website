@@ -19,7 +19,7 @@
   color: $blue-dark;
 
   & > main {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 }
 </style>

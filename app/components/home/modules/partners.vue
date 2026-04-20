@@ -1,12 +1,14 @@
 <template>
   <section class="partners">
-    <h2>{{ $t('home.partners.title') }}</h2>
-    <div class="tiles">
-      <home-components-partners-partner
-        v-for="(partner, key) in PARTNERS"
-        :key="key"
-        :value="partner"
-      />
+    <div class="content">
+      <h2>{{ $t('home.partners.title') }}</h2>
+      <div class="tiles">
+        <home-components-partners-partner
+          v-for="(partner, key) in PARTNERS"
+          :key="key"
+          :value="partner"
+        />
+      </div>
     </div>
     <div class="bottom">
       <svgo-home-bottom filled />
@@ -31,7 +33,15 @@ import { PARTNERS } from '@/domains/partners';
   gap: 2rem;
   align-items: center;
   width: 100%;
-  padding-left: 6rem;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    @add-mixin section-padding;
+  }
 
   h2 {
     align-self: flex-start;

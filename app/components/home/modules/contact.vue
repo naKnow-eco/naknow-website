@@ -143,35 +143,55 @@ const submit = () => {
 .contact {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
   width: 100%;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  @add-mixin section-padding;
   box-sizing: border-box;
 
+  @add-mixin media lt-WXGA {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .header {
+    position: sticky;
+    top: 6rem;
     display: flex;
+    align-self: flex-start;
     flex-direction: column;
     gap: 1rem;
     padding-top: 6rem;
-    width: 100%;
+    padding-bottom: 4rem;
+    width: 24rem;
+
+    @add-mixin media lt-WXGA {
+      position: initial;
+      padding-bottom: 0;
+    }
   }
 
   .contact-form {
     flex: 1;
-    min-width: 0;
-    width: 100%;
     position: relative;
+    margin-top: 6rem;
     margin-bottom: 3rem;
     z-index: 1;
+
+    @add-mixin media lt-WXGA {
+      margin-top: 0;
+    }
 
     form {
       display: grid;
       gap: 4rem;
       grid-template-columns: repeat(2, 1fr);
+
+      @add-mixin media lt-SVGA {
+        grid-template-columns: 1fr;
+      }
 
       div {
         display: flex;
@@ -185,6 +205,10 @@ const submit = () => {
 
       .request {
         grid-column: span 2;
+
+        @add-mixin media lt-SVGA {
+          grid-column: span 1;
+        }
       }
 
       .submit {

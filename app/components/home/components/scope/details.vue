@@ -67,23 +67,23 @@
   }
 
   .box-1.box {
-    width: clamp(14rem, 18vw, 18rem);
+    width: clamp(16rem, 33vw, 26rem);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 2vw;
+    left: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: translate(-50%, -50%);
+    transform: translate(-67.5%, -75%);
     z-index: 1;
     container-type: inline-size;
 
     h4 {
       text-transform: uppercase;
       color: $white-light;
-      font-size: clamp(1rem, 6cqw, 1.5rem);
       line-height: 1.3;
+      text-align: end;
       margin: 0;
     }
   }
@@ -104,11 +104,6 @@
       list-style-position: inside;
       padding: 0;
       margin: 0;
-    }
-
-    li {
-      font-size: clamp(1rem, 5cqw, 1.25rem);
-      line-height: 1.4;
     }
   }
 

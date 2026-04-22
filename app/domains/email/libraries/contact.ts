@@ -24,7 +24,11 @@ const send = (values: ContactEmail) => {
   `)
   }`;
 
-  window.location.href = mailtoLink;
+  const link = document.createElement('a');
+  link.href = mailtoLink;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 };
 
 export const ContactLib = {

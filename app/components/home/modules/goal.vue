@@ -199,22 +199,22 @@
         z-index: 3;
 
         &:nth-child(1) {
-          top: calc(4vw - 4rem);
+          top: calc(4vw - 4.25rem);
           left: 0;
           transform: translate(-50%, -50%);
         }
         &:nth-child(2) {
-          top: calc(4vw - 4rem);
+          top: calc(4vw - 4.25rem);
           left: 50%;
           transform: translate(-50%, -50%);
         }
         &:nth-child(3) {
-          bottom: calc(4vw - 4rem);
+          bottom: calc(4vw - 4.25rem);
           left: 12%;
           transform: translate(0, 50%);
         }
         &:nth-child(4) {
-          bottom: calc(4vw - 4rem);
+          bottom: calc(4vw - 4.25rem);
           right: 0;
           transform: translate(25%, 50%);
         }

@@ -86,7 +86,17 @@
             required
           />
         </div>
-        <button class="submit" type="submit">Send</button>
+        <div class="actions">
+          <home-components-contact-message
+            :message="feedbackMessage"
+            @click="feedbackMessage = null"
+          />
+          <button
+            class="submit"
+            type="submit"
+            :disabled="loading"
+          >{{ $t('home.contact.form.send.button') }}</button>
+        </div>
       </form>
     </ui-container-box>
   </section>
@@ -99,7 +109,10 @@ import {
   type ContactEmailRef,
 } from '@/domains/email';
 
-import { MapLib } from '@/utils/dictionary';
+import { DictionaryLib } from '@/utils/dictionary';
+
+const feedbackMessage = ref<string | null>(null);
+const loading = ref(false);
 
 const form = reactive<ContactEmailRef>({
   personal: {
@@ -119,7 +132,12 @@ const form = reactive<ContactEmailRef>({
   },
 });
 
-const submit = () => {
+watch(form, () => {
+  feedbackMessage.value = null;
+}, { deep: true });
+
+const submit = async () => {
+  feedbackMessage.value = null;
   Object.values(form).forEach((section) => {
     Object.values(section).forEach((field) => {
       field?.checkStatus();
@@ -131,11 +149,23 @@ const submit = () => {
       .every((field) => field?.isValid))
   ) return;
 
-  const values = MapLib.values(form,
-    (section) => MapLib.values(section,
+  const values = DictionaryLib.map.values(form,
+    (section) => DictionaryLib.map.values(section,
       (field) => (field?.value ?? null))) as ContactEmail;
 
-  ContactLib.send(values);
+  loading.value = true;
+  try {
+    const result = await ContactLib.send(values);
+    console.log('Contact email sent successfully:', result);
+    feedbackMessage.value = $t('home.contact.form.send.success') as string;
+  }
+  catch (error) {
+    console.error('Failed to send contact email:', error);
+    feedbackMessage.value = $t('home.contact.form.send.error') as string;
+  }
+  finally {
+    loading.value = false;
+  }
 };
 </script>
 
@@ -211,25 +241,44 @@ const submit = () => {
         }
       }
 
-      .submit {
-        justify-self: flex-start;
-        padding: 0.5rem 1rem;
-        background-color: $blue-dark;
-        color: $white-light;
-        border-radius: $radius-lg;
-        @add-mixin shadow;
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        grid-column: span 2;
 
-        @add-mixin transition-bounce 0.4s, 1.1;
-        transition-property: all;
-
-        &:hover {
-          background-color: $blue-light;
-          color: $blue-dark;
-          scale: 1.05;
+        @add-mixin media lt-SVGA {
+          grid-column: span 1;
         }
-        &:focus {
-          outline-color: $gold-light;
-          scale: 1.05;
+
+        align-items: center;
+
+        .submit {
+          justify-self: flex-start;
+          padding: 0.5rem 1rem;
+          background-color: $blue-dark;
+          color: $white-light;
+          border-radius: $radius-lg;
+          @add-mixin shadow;
+
+          @add-mixin transition-bounce 0.4s, 1.1;
+          transition-property: all;
+
+          &:hover:not(:disabled) {
+            background-color: $blue-light;
+            color: $blue-dark;
+            scale: 1.05;
+          }
+          &:focus:not(:disabled) {
+            outline-color: $gold-light;
+            scale: 1.05;
+          }
+          &:disabled {
+            background-color: $gray-light;
+            color: $gray-dark;
+            cursor: not-allowed;
+            scale: 1;
+          }
         }
       }
     }

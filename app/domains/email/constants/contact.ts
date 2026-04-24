@@ -1,1 +1,1 @@
-export const EMAIL_TO = 'arthur.removille@resilio.tech';
+export const CONTACT_URL = 'https://rake.red/api/naknow/contact';

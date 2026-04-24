@@ -53,7 +53,7 @@ const isValid = computed(() => {
   if (!value) return false;
   if (props.required instanceof RegExp) return props.required.test(value);
   if (props.type === 'email') return (/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(value);
-  if (props.type === 'tel') return (/^\+?[0-9\s\-()]+$/).test(value);
+  if (props.type === 'tel') return (/^\+?[0-9\s\-()]{10,}$/).test(value);
   return value.trim() !== '';
 });
 

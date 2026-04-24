@@ -125,6 +125,11 @@
                     "message": {
                         "label": "Message"
                     }
+                },
+                "send": {
+                    "button": "Send",
+                    "success": "Your form has been successfully sent!",
+                    "error": "Something went wrong while sending your message. Please try again later."
                 }
             }
         }

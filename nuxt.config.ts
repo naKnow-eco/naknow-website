@@ -15,7 +15,14 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/svg+xml',
-          href: '/small-naknow.svg',
+          href: '/small-light-naknow.svg',
+          media: '(prefers-color-scheme: light)',
+        },
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/small-dark-naknow.svg',
+          media: '(prefers-color-scheme: dark)',
         },
       ],
     },

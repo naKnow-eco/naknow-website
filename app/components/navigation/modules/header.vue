@@ -1,11 +1,18 @@
 <template>
   <header :class="['header-desktop', { open: opened }]">
     <img class="logo" src="/naknow.svg" alt="naknow logo" />
-    <transition-group tag="ul" name="link">
+    <transition-group tag="ul" name="link" class="links">
       <li v-for="link in links" :key="link.href" class="link">
         <navigation-components-page-link :to="link.href" :external="link.external">
           {{ link.name }}
         </navigation-components-page-link>
+        <ul v-if="link.subLinks" class="sub-links">
+          <li v-for="subLink in link.subLinks" :key="subLink.href" class="sub-link">
+            <navigation-components-page-link :to="subLink.href" :external="subLink.external">
+              {{ subLink.name }}
+            </navigation-components-page-link>
+          </li>
+        </ul>
       </li>
     </transition-group>
     <span
@@ -18,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { NAV_LINKS } from '~/domains/navigation';
+import { NAV_LINKS } from '@/domains/navigation';
 
 const opened = ref(false);
 
@@ -28,6 +35,11 @@ const links = computed(() => {
     ...link,
     name: $t(link.name),
     href: $te(link.href) ? $t(link.href) : link.href,
+    subLinks: link.subLinks?.map((subLink) => ({
+      ...subLink,
+      name: $t(subLink.name),
+      href: $te(subLink.href) ? $t(subLink.href) : subLink.href,
+    })),
   }));
 });
 </script>
@@ -45,7 +57,7 @@ const links = computed(() => {
   flex-direction: row;
   align-items: center;
 
-  ul {
+  .links {
     flex: 1;
     display: inline-flex;
     flex-direction: row;
@@ -56,14 +68,45 @@ const links = computed(() => {
     transition: transform 0.5s ease;
     transform: translateX(1rem);
 
-    li {
+    .link {
       list-style: none;
+      position: relative;
+
       a {
         @add-mixin media lt-WXGA {
           font-size: 0.875rem;
         }
         @add-mixin media lt-SVGA {
           font-size: 0.75rem;
+        }
+      }
+
+      .sub-links {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background-color: $white-light;
+        border-radius: $radius-lg;
+        @add-mixin shadow;
+        transition: all 0.3s ease 0.15s;
+        width: max-content;
+        transform: translateY(100%) translateX(-50%);
+
+        .sub-link {
+          list-style: none;
+        }
+      }
+
+      &:not(:hover) {
+        .sub-links {
+          opacity: 0;
+          transform: translateY(calc(100% - 0.5rem)) translateX(-50%);
+          pointer-events: none;
         }
       }
     }

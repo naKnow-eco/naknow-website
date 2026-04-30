@@ -11,7 +11,7 @@
     </div>
     <transition name="links">
       <div v-if="opened" class="links">
-        <ul>
+        <ul class="list-links">
           <li v-for="link in links" :key="link.href" class="link">
             <navigation-components-page-link
               :to="link.href"
@@ -20,6 +20,14 @@
             >
               {{ link.name }}
             </navigation-components-page-link>
+            <ul v-if="link.subLinks" class="sub-links">
+              <li v-for="subLink in link.subLinks" :key="subLink.href" class="sub-link">
+                <navigation-components-page-link :to="subLink.href" :external="subLink.external">
+                  {{ subLink.name }}
+                </navigation-components-page-link>
+                <span class="tree">┘</span>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -36,6 +44,11 @@ const links = computed(() => NAV_LINKS.map((link) => ({
   ...link,
   name: $t(link.name),
   href: $te(link.href) ? $t(link.href) : link.href,
+  subLinks: link.subLinks?.map((subLink) => ({
+    ...subLink,
+    name: $t(subLink.name),
+    href: $te(subLink.href) ? $t(subLink.href) : subLink.href,
+  })),
 })));
 </script>
 
@@ -66,7 +79,7 @@ const links = computed(() => NAV_LINKS.map((link) => ({
     overflow: hidden;
     box-sizing: border-box;
 
-    ul {
+    .list-links {
       width: 100%;
       flex: 1;
       display: inline-flex;
@@ -76,8 +89,29 @@ const links = computed(() => NAV_LINKS.map((link) => ({
       padding: 1.25rem;
     }
 
+    .sub-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+
+      .sub-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        .tree {
+          font-size: 1.5rem;
+          color: $gold-dark;
+        }
+      }
+    }
+
     li {
       list-style: none;
+      text-align: right;
     }
   }
 

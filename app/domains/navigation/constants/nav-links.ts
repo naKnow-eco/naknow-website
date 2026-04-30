@@ -1,4 +1,6 @@
-export const NAV_LINKS = [
+import type { NavLink } from '@/domains/navigation';
+
+export const NAV_LINKS: NavLink[] = [
   {
     name: 'header.links.about',
     href: '#about',
@@ -13,6 +15,18 @@ export const NAV_LINKS = [
     name: 'header.links.outputs',
     href: '#outputs',
     external: false,
+    subLinks: [
+      {
+        name: 'home.goal.dataset.environmental.text',
+        href: 'home.goal.dataset.environmental.link',
+        external: true,
+      },
+      {
+        name: 'home.goal.dataset.knowledge.text',
+        href: 'home.goal.dataset.knowledge.link',
+        external: true,
+      },
+    ],
   },
   {
     name: 'header.links.methods',
@@ -23,15 +37,5 @@ export const NAV_LINKS = [
     name: 'header.links.contact',
     href: '#contact',
     external: false,
-  },
-  {
-    name: 'home.goal.dataset.environmental.text',
-    href: 'home.goal.dataset.environmental.link',
-    external: true,
-  },
-  {
-    name: 'home.goal.dataset.knowledge.text',
-    href: 'home.goal.dataset.knowledge.link',
-    external: true,
   },
 ] as const;

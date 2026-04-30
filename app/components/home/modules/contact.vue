@@ -22,7 +22,6 @@
             translation="home.contact.form.personal.phone"
             id="contact-personal-phone"
             type="tel"
-            required
           />
 
           <ui-input-field
@@ -41,7 +40,6 @@
             translation="home.contact.form.company.sector"
             id="contact-company-sector"
             type="text"
-            required
           />
 
           <ui-input-field
@@ -57,7 +55,6 @@
             translation="home.contact.form.company.yourTitle"
             id="contact-company-title"
             type="text"
-            required
           />
         </div>
         <div class="request">

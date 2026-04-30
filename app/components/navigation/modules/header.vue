@@ -3,7 +3,7 @@
     <img class="logo" src="/naknow.svg" alt="naknow logo" />
     <transition-group tag="ul" name="link">
       <li v-for="link in links" :key="link.href" class="link">
-        <navigation-components-page-link :to="link.href">
+        <navigation-components-page-link :to="link.href" :external="link.external">
           {{ link.name }}
         </navigation-components-page-link>
       </li>
@@ -18,32 +18,17 @@
 </template>
 
 <script setup lang="ts">
+import { NAV_LINKS } from '~/domains/navigation';
+
 const opened = ref(false);
 
 const links = computed(() => {
   if (!opened.value) return [];
-  return [
-    {
-      name: $t('header.links.contact'),
-      href: '#contact',
-    },
-    {
-      name: $t('header.links.methods'),
-      href: '#methods',
-    },
-    {
-      name: $t('header.links.outputs'),
-      href: '#outputs',
-    },
-    {
-      name: $t('header.links.mission'),
-      href: '#mission',
-    },
-    {
-      name: $t('header.links.about'),
-      href: '#about',
-    },
-  ];
+  return NAV_LINKS.map((link) => ({
+    ...link,
+    name: $t(link.name),
+    href: $te(link.href) ? $t(link.href) : link.href,
+  }));
 });
 </script>
 
@@ -63,7 +48,8 @@ const links = computed(() => {
   ul {
     flex: 1;
     display: inline-flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
     gap: 1.5rem;
     padding-right: 1.25rem;
@@ -72,6 +58,14 @@ const links = computed(() => {
 
     li {
       list-style: none;
+      a {
+        @add-mixin media lt-WXGA {
+          font-size: 0.875rem;
+        }
+        @add-mixin media lt-SVGA {
+          font-size: 0.75rem;
+        }
+      }
     }
   }
 

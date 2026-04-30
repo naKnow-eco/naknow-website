@@ -3,9 +3,9 @@
     <div>
       <svgo-naknow-full filled class="naknow-logo" />
       <div class="social">
-        <svgo-social-linkedin filled class="social-icon" />
+        <nuxt-link to="https://www.linkedin.com/company/naknow-eco" target="_blank"><svgo-social-linkedin filled class="social-icon" /></nuxt-link>
         <span> | </span>
-        <a href="mailto:contact@naknow.com">contact@naknow.com</a>
+        <nuxt-link to="mailto:contact@naknow.com">contact@naknow.com</nuxt-link>
       </div>
     </div>
     <div>
@@ -39,9 +39,10 @@ footer {
     gap: 1rem;
     justify-content: flex-end;
     width: 20rem;
+    z-index: 1;
 
     &:nth-child(1) { align-items: flex-start; }
-    &:nth-child(2) { align-items: center; }
+    &:nth-child(2) { align-items: center; text-align: center; }
     &:nth-child(3) { align-items: flex-end; }
 
     .naknow-logo {
@@ -58,6 +59,7 @@ footer {
       flex-direction: row;
       gap: 1rem;
       align-items: center;
+      z-index: 1;
 
       .social-icon {
         width: 2rem;

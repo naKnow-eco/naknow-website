@@ -13,7 +13,11 @@
       <div v-if="opened" class="links">
         <ul>
           <li v-for="link in links" :key="link.href" class="link">
-            <navigation-components-page-link :to="link.href" @click.native="opened = false">
+            <navigation-components-page-link
+              :to="link.href"
+              :external="link.external"
+              @click.native="opened = false"
+            >
               {{ link.name }}
             </navigation-components-page-link>
           </li>
@@ -24,30 +28,15 @@
 </template>
 
 <script setup lang="ts">
+import { NAV_LINKS } from '~/domains/navigation';
+
 const opened = ref(false);
 
-const links = computed(() => [
-  {
-    name: $t('header.links.contact'),
-    href: '#contact',
-  },
-  {
-    name: $t('header.links.methods'),
-    href: '#methods',
-  },
-  {
-    name: $t('header.links.outputs'),
-    href: '#outputs',
-  },
-  {
-    name: $t('header.links.mission'),
-    href: '#mission',
-  },
-  {
-    name: $t('header.links.about'),
-    href: '#about',
-  },
-]);
+const links = computed(() => NAV_LINKS.map((link) => ({
+  ...link,
+  name: $t(link.name),
+  href: $te(link.href) ? $t(link.href) : link.href,
+})));
 </script>
 
 <style scoped lang="postcss">
@@ -81,7 +70,7 @@ const links = computed(() => [
       width: 100%;
       flex: 1;
       display: inline-flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: flex-end;
       gap: 1.5rem;
       padding: 1.25rem;

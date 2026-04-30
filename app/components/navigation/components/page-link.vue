@@ -1,5 +1,9 @@
 <template>
-  <nuxt-link :to="to" :class="['page-link', { active: isPageLink }]">
+  <nuxt-link
+    :to="to"
+    :class="['page-link', { active: isPageLink }]"
+    :target="external ? '_blank' : undefined"
+  >
     <slot />
   </nuxt-link>
 </template>
@@ -7,6 +11,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   to: string;
+  external?: boolean;
 }>(), {
 
 });

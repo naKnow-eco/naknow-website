@@ -49,11 +49,23 @@ import { PARTNERS } from '@/domains/partners';
 
   .tiles {
     padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: 4rem 8rem;
     justify-content: center;
     align-items: stretch;
+    grid-template-columns: repeat(3, auto);
+
+    @add-mixin media gt-WXGA2 {
+      grid-template-columns: repeat(6, auto);
+    }
+
+    @add-mixin media tablet {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @add-mixin media mobile {
+      grid-template-columns: repeat(1, auto);
+    }
   }
 
   .bottom {

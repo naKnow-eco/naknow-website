@@ -5,7 +5,7 @@
       <div class="social">
         <nuxt-link to="https://www.linkedin.com/company/naknow-eco" target="_blank"><svgo-social-linkedin filled class="social-icon" /></nuxt-link>
         <span> | </span>
-        <nuxt-link to="mailto:contact@naknow.com">contact@naknow.com</nuxt-link>
+        <nuxt-link to="mailto:contact@naknow.eco">contact@naknow.eco</nuxt-link>
       </div>
     </div>
     <div>

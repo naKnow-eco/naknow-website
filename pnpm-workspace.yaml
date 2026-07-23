@@ -1,2 +1,6 @@
 packages:
   - configs/*
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true

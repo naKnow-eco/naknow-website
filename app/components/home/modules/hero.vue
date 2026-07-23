@@ -4,6 +4,9 @@
       <h1 class="title">{{ $t('home.hero.title') }}</h1>
       <svgo-naknow-small class="naknow-small" />
       <p class="description" v-html="$t('home.hero.description')" />
+      <a class="press-release" href="/NAKNOW_press_release.pdf" download>
+        Press release
+      </a>
     </div>
     <svgo-home-hero-printed-circuit class="circuit" />
   </section>
@@ -47,6 +50,16 @@
 
     .description {
       color: $white-light;
+    }
+
+    .press-release {
+      color: $gold-dark;
+      font-weight: 600;
+      text-decoration: underline;
+
+      &:hover {
+        color: $white-light;
+      }
     }
 
     .naknow-small {

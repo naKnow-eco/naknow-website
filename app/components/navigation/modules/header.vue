@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import { NAV_LINKS } from '@/domains/navigation';
 
-const opened = ref(false);
+const opened = ref(true);
 
 const links = computed(() => {
   if (!opened.value) return [];

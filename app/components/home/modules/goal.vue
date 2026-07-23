@@ -9,6 +9,9 @@
             {{ $rt(item) }}
           </li>
         </ul>
+        <div class="knowledge-link">
+          <ui-button-external-link translation="home.goal.dataset.knowledge" />
+        </div>
       </ui-container-box>
       <div class="images">
         <nuxt-img src="/img/manufacturing.jpg" alt="Ruan Richard Rodrigues | unsplash.com" />
@@ -23,6 +26,9 @@
             {{ $rt(item) }}
           </li>
         </ul>
+        <div class="dataset-link">
+          <ui-button-external-link translation="home.goal.dataset.environmental" />
+        </div>
       </ui-container-box>
       <div class="goal-points">
         <ui-container-box class="dataset" color="light" spacing="lg">
@@ -35,18 +41,6 @@
               {{ $rt(item) }}
             </li>
           </ul>
-          <div class="links">
-            <ui-container-box color="gold">
-              <ui-button-external-link
-                translation="home.goal.dataset.knowledge"
-              />
-            </ui-container-box>
-            <ui-container-box color="gold">
-              <ui-button-external-link
-                translation="home.goal.dataset.environmental"
-              />
-            </ui-container-box>
-          </div>
         </ui-container-box>
       </div>
       <svgo-home-goal-earth filled class="earth" />
@@ -99,6 +93,10 @@
     .description-card {
       align-self: flex-start;
       z-index: 1;
+
+      .knowledge-link {
+        margin-top: 1rem;
+      }
     }
 
     .images {
@@ -145,6 +143,10 @@
 
       li {
         list-style-position: outside;
+      }
+
+      .dataset-link {
+        margin-top: 1rem;
       }
     }
 

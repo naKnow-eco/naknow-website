@@ -23,7 +23,7 @@ export const PARTNERS: Partner[] = [
   },
   {
     name: 'tnd',
-    logo: '/img/partners/tnd.svg',
+    logo: '/img/partners/tnd.avif',
     url: 'https://www.tndmetal.net/',
   },
   {

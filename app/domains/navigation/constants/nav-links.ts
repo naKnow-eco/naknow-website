@@ -34,6 +34,16 @@ export const NAV_LINKS: NavLink[] = [
     external: false,
   },
   {
+    name: 'header.links.events',
+    href: '#events',
+    external: false,
+  },
+  {
+    name: 'header.links.faq',
+    href: '#faq',
+    external: false,
+  },
+  {
     name: 'header.links.contact',
     href: '#contact',
     external: false,

@@ -13,6 +13,10 @@
 
     <home-modules-partners />
 
+    <home-modules-events />
+
+    <home-modules-faq />
+
     <home-modules-contact />
   </div>
 </template>

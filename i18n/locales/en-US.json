@@ -132,6 +132,11 @@
                     "error": "Something went wrong while sending your message. Please try again later."
                 }
             }
+        },
+        "events": {
+            "title": "Events",
+            "upcoming": "Upcoming events",
+            "past": "Past events"
         }
     },
     "footer": {
@@ -146,7 +151,180 @@
             "mission": "Mission & objectives",
             "outputs": "Outputs",
             "methods": "Methods",
-            "contact": "Contact"
+            "contact": "Contact",
+            "faq": "FAQ",
+            "events": "Events"
         }
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "sections": [
+            {
+                "title": "Membership / joining",
+                "questions": [
+                    {
+                        "question": "How does membership work?",
+                        "answer": {
+                            "text": [
+                                "Membership consists of an annual fee payable to the association. There are several fee categories (Individual, Non-profit organization, Government agency, Public Laboratory : TBD, Micro-enterprise, SME, Mid-sized company, Large company). To join, an organisation pays the fee corresponding to its category. Fees levels are currently worked on, and the association aims to keep membership affordable for nonprofit organizations, government agencies, and public laboratories. Organizations may also provide non-monetary contributions (expertise, time, data, resources, networks, etc)."
+                            ]
+                        }
+                    },
+                    {
+                        "question": "How does membership and non-monetary assets exchange work?",
+                        "answer": {
+                            "text": [
+                                "Non-monetary assets (employees skills x time, data, resources, visibility...etc) can be used to pay for memberships (partially or completely). The value of the non-monetary asset is determined on a case-by-case basis through discussions between the Association Board and the non-monetary asset holding organization, taking into account the costs of producing or acquiring the asset, as well as its relevance to the project and the community. The value of the non-monetary asset is deducted from the membership fee. Remaining fee value must be paid for."
+                            ]
+                        }
+                    },
+                    {
+                        "question": "Why should any organization invest [time, skills, money, data, code, resources, brand] in naKnow?",
+                        "answer": {
+                            "text": [
+                                "An engagement in naKnow can provide value in multiple areas :"
+                            ],
+                            "items": [
+                                "State-of-the-art, open knowledge / models / data",
+                                "Long term maintenance",
+                                "Experts community & network",
+                                "Innovation / development opportunities",
+                                "Trustworthy / neutral player",
+                                "Saved time / costs by sharing work loads"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Business model",
+                "questions": [
+                    {
+                        "question": "What is naKnow business model?",
+                        "answer": {
+                            "text": [
+                                "The business model is currently being defined. The potential components of the business model are:"
+                            ],
+                            "items": [
+                                "Memberships",
+                                "Sponsorship / donations",
+                                "Skills based & Resources based sponsorship",
+                                "Government or European Union grants",
+                                "Training licenses"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Data",
+                "questions": [
+                    {
+                        "question": "What data does naKnow need?",
+                        "answer": {
+                            "text": [
+                                "We welcome all data (materials, processes, etc.) related to the target components. Each working group has a clear idea of the information to be collected and validated. Feel free to get in touch for more information."
+                            ]
+                        }
+                    },
+                    {
+                        "question": "How do you handle confidential data?",
+                        "answer": {
+                            "text": [
+                                "Confidential data can be secured at several level :"
+                            ],
+                            "items": [
+                                "Contract : We can sign an NDA",
+                                "Organisational : Confidential data can be handled by our data officer only",
+                                "Licences : Reverse engineering can be blocked by dedicated licences clauses",
+                                "Technical : Confidential data hosted by naKnow can be hidden from knowledge base / members / users and only accessible by the calculation engine producing LCI snapshots (with no human access / intervention)."
+                            ]
+                        }
+                    },
+                    {
+                        "question": "In what formats will the data be available? How do you handle interoperability?",
+                        "answer": {
+                            "text": [
+                                "At its core, naKnow is designed to be as open as possible. Therefore, the data it generates is not intended to be limited to a single software program or database. To meet the needs of as many users as possible, the data will be available in various formats (aggregated and disaggregated ICV data, impact data, etc). The specific formats / requirements are currently being defined. Current formats candidates include JSON / YAML / ecoSpold / eILCD formats, with Brightway / OpenLCA as preferred LCA target software. Other data formats / software may be added to the roadmap in the future."
+                            ]
+                        }
+                    },
+                    {
+                        "question": "How do you handle data representativity?",
+                        "answer": {
+                            "text": [
+                                "Coming soon"
+                            ]
+                        }
+                    },
+                    {
+                        "question": "How do you map elementary flows?",
+                        "answer": {
+                            "text": [
+                                "Coming soon"
+                            ]
+                        }
+                    },
+                    {
+                        "question": "How do you handle maintenance / evolution?",
+                        "answer": {
+                            "text": [
+                                "naKnow will be maintained by a staff responsible for infrastructure and tools, IT development, updates, support, community engagement and management, administration, and handling legal matters. We plan to fund these staff members and activities through membership fees, training licenses, and other sources of revenue (sponsorships, donations, grants, etc – see “Business Model”).",
+                                "naKnow evolutions / new workgroups will be funded by new projects."
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Team / community",
+                "questions": [
+                    {
+                        "question": "Which players are involved in naKnow?",
+                        "answer": {
+                            "text": [
+                                "naKnow aims to bring together all players involved throughout the entire lifecycle of components, from upstream (manufacturers of production equipment) to downstream (manufacturers of equipment or systems that incorporate a component). As we’re early in naKnow life cycle, we can’t provide a list of members for now, but we’ll publish one in the future."
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Getting involved / contributing",
+                "questions": [
+                    {
+                        "question": "How can you contribute your time to naKnow?",
+                        "answer": {
+                            "text": [
+                                "naKnow members can contribute by:"
+                            ],
+                            "items": [
+                                "Providing knowledge / models / data on fundamental components (Wafer, PCB, Screen, Optical sensor, HDD...)",
+                                "Reviewing / maintaining them",
+                                "Developping software",
+                                "Developping the community / visibility",
+                                "Providing tooling, organizational, administrative, material or financial support"
+                            ]
+                        }
+                    },
+                    {
+                        "question": "How is the data shared?",
+                        "answer": {
+                            "text": [
+                                "For non confidential data, it can be shared directly with each work group leader. Feel free to get in touch for more information."
+                            ]
+                        }
+                    },
+                    {
+                        "question": "How do you handle tasks distribution between members / contributor?",
+                        "answer": {
+                            "text": [
+                                "There is no formal rule for tasks distribution right now. Tasks are distributed according to skills, availability, interest. Dedicated rules may be defined by the community and set up in the future if needed."
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
     }
 }

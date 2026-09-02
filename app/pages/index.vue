@@ -15,6 +15,8 @@
 
     <home-modules-events />
 
+    <home-modules-projects />
+
     <home-modules-faq />
 
     <home-modules-contact />

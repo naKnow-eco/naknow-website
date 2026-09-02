@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="16" fill="#FFFFFF"/>
+  <rect x="40" y="40" width="320" height="160" rx="12" fill="#0D3856" opacity="0.05"/>
+  <g fill="#87ABC1" opacity="0.4">
+    <rect x="55" y="55" width="38" height="38" rx="4"/>
+    <rect x="100" y="55" width="38" height="38" rx="4"/>
+    <rect x="145" y="55" width="38" height="38" rx="4"/>
+    <rect x="190" y="55" width="38" height="38" rx="4"/>
+    <rect x="55" y="100" width="38" height="38" rx="4"/>
+    <rect x="100" y="100" width="38" height="38" rx="4"/>
+    <rect x="190" y="100" width="38" height="38" rx="4"/>
+    <rect x="55" y="145" width="38" height="38" rx="4"/>
+    <rect x="145" y="145" width="38" height="38" rx="4"/>
+    <rect x="235" y="55" width="38" height="38" rx="4"/>
+    <rect x="280" y="55" width="38" height="38" rx="4"/>
+  </g>
+  <rect x="145" y="100" width="38" height="38" rx="4" fill="#D1BD8F" stroke="#0D3856" stroke-width="2"/>
+  <text x="164" y="121" text-anchor="middle" font-family="SegoeUI, Lexend, sans-serif" font-size="10" font-weight="600" fill="#0D3856">93</text>
+  <text x="164" y="130" text-anchor="middle" font-family="SegoeUI, Lexend, sans-serif" font-size="7" fill="#0D3856">09</text>
+  <rect x="235" y="100" width="38" height="38" rx="4" fill="#0D3856"/>
+  <text x="254" y="124" text-anchor="middle" font-family="SegoeUI, Lexend, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">?</text>
+  <rect x="280" y="100" width="38" height="38" rx="4" fill="#0D3856"/>
+  <text x="299" y="124" text-anchor="middle" font-family="SegoeUI, Lexend, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">?</text>
+  <rect x="235" y="145" width="38" height="38" rx="4" fill="#0D3856"/>
+  <text x="254" y="169" text-anchor="middle" font-family="SegoeUI, Lexend, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">?</text>
+  <text x="200" y="215" text-anchor="middle" font-family="SegoeUI, Lexend, sans-serif" font-size="14" font-weight="600" fill="#0D3856">Filling the critical-elements data gap</text>
+</svg>

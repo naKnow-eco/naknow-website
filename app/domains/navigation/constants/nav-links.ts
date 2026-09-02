@@ -39,6 +39,11 @@ export const NAV_LINKS: NavLink[] = [
     external: false,
   },
   {
+    name: 'header.links.projects',
+    href: '#projects',
+    external: false,
+  },
+  {
     name: 'header.links.faq',
     href: '#faq',
     external: false,

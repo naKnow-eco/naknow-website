@@ -137,6 +137,21 @@
             "title": "Events",
             "upcoming": "Upcoming events",
             "past": "Past events"
+        },
+        "projects": {
+            "title": "Projects",
+            "project1": {
+                "name": "Project #1",
+                "subtitle": "Five fantastics",
+                "description": "The digital sector has long lacked the environmental intelligence that it needs to enable life cycle assessment and eco-design. naknow's Project #1 was built to change that.",
+                "details": "An open platform publishing expert-validated Life Cycle Inventory (LCI) data for five core families of electronic components: silicon wafers, PCBs, displays, HDDs, and optical components.\n\nBy opening the black box around these 5 key components we can see what the hotspots are and how we can reduce the environmental footprint of the digital industry!"
+            },
+            "project2": {
+                "name": "Project #2",
+                "subtitle": "Data gap",
+                "description": "The basic components of the digital industry are semiconductors. From data storage to calculation, everything goes through chips and wafers!",
+                "details": "The semiconductor industry requires high purity metals and gases and very specific elements in its processes. The environmental impact of those critical elements is still largely unknown. We are facing a data gap!\n\nProject #2 aims to unlock this situation by creating those missing elements environmental impact dataset and filling this data gap."
+            }
         }
     },
     "footer": {
@@ -153,7 +168,8 @@
             "methods": "Methods",
             "contact": "Contact",
             "faq": "FAQ",
-            "events": "Events"
+            "events": "Events",
+            "projects": "Projects"
         }
     },
     "faq": {

@@ -4,9 +4,19 @@
       <h1 class="title">{{ $t('home.hero.title') }}</h1>
       <svgo-naknow-small class="naknow-small" />
       <p class="description" v-html="$t('home.hero.description')" />
-      <a class="press-release" href="/NAKNOW_press_release.pdf" download>
-        Press release
-      </a>
+      <div class="links">
+        <a class="press-release" href="/NAKNOW_press_release.pdf" download>
+          Press release
+        </a>
+        <span class="separator">|</span>
+        <a
+          class="press-release"
+          href="/ArticlesOfTheAssociation.pdf"
+          download
+        >
+          Articles of naKnow
+        </a>
+      </div>
     </div>
     <svgo-home-hero-printed-circuit class="circuit" />
   </section>
@@ -50,6 +60,16 @@
 
     .description {
       color: $white-light;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .separator {
+      color: $gold-dark;
     }
 
     .press-release {
